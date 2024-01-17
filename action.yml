@@ -1,0 +1,25 @@
+# action.yml
+name: 'Delete CPU'
+description: 'Delete CPU by uuid'
+inputs:
+  access-key:
+    description: 'access-key'
+    required: true
+    default: 'access-key'
+  secret-key:
+    description: 'secret-key'
+    required: true
+    default: 'secret-key'
+  uuid:
+    description: 'uuid of cpu to delete'
+    required: true
+outputs:
+  success:
+    description: 'success flag'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.access-key }}
+    - ${{ inputs.secret-key }}
+    - ${{ inputs.uuid }}
