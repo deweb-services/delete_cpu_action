@@ -32,4 +32,4 @@ IP address of your deployment.
           uuid: 'd40aa34f-49ce-4481-8d05-e78f8f9f9af7'
 
       - name: Get the output
-        run: echo "The uuid is ${{ steps.delete-cpu.outputs.uuid }}"
+        run: echo "The deletion was successful ${{ steps.delete-cpu.outputs.success }}"
